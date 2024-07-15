@@ -91,6 +91,7 @@ export const CustomersProvider = ({ children }: IDataProvider) => {
         const id = query.get('id');
         const newCustomerId = id ? +id : 1;
         if (newCustomerId !== customerId) {
+            console.log(newCustomerId)
             setCustomerId(newCustomerId);
         }
     }, [query, customerId]);

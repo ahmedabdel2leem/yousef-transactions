@@ -15,7 +15,7 @@ function TransactionGraph({ }: Props) {
 
     const amounts = getTransacitons().map((transaction: ITransactions) => transaction.amount);
     const options = {
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
         layout: {
             padding: {
                 left: 20,

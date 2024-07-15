@@ -1,18 +1,34 @@
 import { useContext } from "react";
+
 import CustomerContext from "../../Context/CustomersContext";
 import { ITransactions } from "../../interface";
 
-type Props = {
 
-}
 
-function CustomerDetails({ }: Props) {
-    const { getTransacitons, getCustomerById, custoemrId } = useContext(CustomerContext);
-    const amounts = getTransacitons().map((transaction: ITransactions) => transaction.amount);
-    const customer = getCustomerById(custoemrId)
+function TransactionDetails() {
+    const { getCustomerById, formatCurrency, getTransacitons, customerId } = useContext(CustomerContext);
+
+
+    const customerTransactions = getTransacitons();
+    let customer = getCustomerById(customerId)
+
+    console.log(customer)
+    // calc average
+    const amounts = customerTransactions.map((transaction: ITransactions) => transaction.amount);
+    const total = amounts.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
+
     return (
-        <div></div>
-    )
+
+        <div className="w-1/2 bg-green-200 h-fit rounded-2xl overflow-scroll overflow-x-hidden ">
+            <div>{customer?.name}</div>
+            <ul className="space-y-6">
+                {customerTransactions.map((trans) => {
+                    return <li>{trans.amount}</li>
+                })}
+
+            </ul>
+        </div>
+    );
 }
 
-export default CustomerDetails
+export default TransactionDetails;

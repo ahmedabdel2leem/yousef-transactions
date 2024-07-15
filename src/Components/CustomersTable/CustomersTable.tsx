@@ -31,14 +31,14 @@ function CustomersTable({ }) {
                     <div className="flex lg:flex-row flex-col gap-2">
                         <input
                             type="text"
-                            className="w-32  placeholder-gray-300 bg-opacity-20 bg-green-300 text-whitefocus:placeholder-transparent   rounded-[.40rem]  py-2 px-3 outline-none "
+                            className="w-32  placeholder-gray-300 bg-opacity-20 bg-green-300 focus:placeholder-transparent   rounded-[.40rem]  py-2 px-3 outline-none "
                             placeholder="Min Amount"
                             value={minAmount === undefined ? '' : minAmount}
                             onChange={(e) => setMinAmount(e.target.value === '' ? undefined : parseFloat(e.target.value))}
                         />
                         <input
                             type="text"
-                            className="w-32 placeholder-gray-300 bg-opacity-20 bg-green-300 text-white focus:placeholder-transparent   rounded-[.40rem]  py-2 px-3 outline-none"
+                            className="w-32 placeholder-gray-300 bg-opacity-20 bg-green-300  focus:placeholder-transparent   rounded-[.40rem]  py-2 px-3 outline-none"
                             placeholder="Max Amount"
                             value={maxAmount === undefined ? '' : maxAmount}
                             onChange={(e) => setMaxAmount(e.target.value === '' ? undefined : parseFloat(e.target.value))}
