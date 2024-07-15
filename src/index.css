@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollbar{
+    overflow-y: auto; 
+    position: relative;
+}
+.scrollbar::-webkit-scrollbar {
+    width: 10px; 
+    height: 10px; 
+}
+.scrollbar::-webkit-scrollbar-track {
+    background-color: transparent; /* Use transparent or match your div's background */
+    border-radius: 20px  150px 150px 0px; /* Adjust radius to match your div's rounded corners */
+}
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #e0cbcb; /* Color of the scrollbar thumb */
+    border-radius: 10px 150px 150px 10px ; /* Match the track's border-radius */
+    /* border: 3px solid #f6f7ed; Optional: Border around the thumb */
+}
