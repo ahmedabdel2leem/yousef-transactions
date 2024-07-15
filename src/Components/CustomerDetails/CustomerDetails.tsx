@@ -6,7 +6,7 @@ import { ITransactions } from "../../interface";
 
 
 function TransactionDetails() {
-    const { getCustomerById, formatCurrency, getTransacitons, customerId } = useContext(CustomerContext);
+    const { getCustomerById, getTransacitons, customerId } = useContext(CustomerContext);
 
 
     const customerTransactions = getTransacitons();
