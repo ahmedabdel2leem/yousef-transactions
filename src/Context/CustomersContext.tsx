@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
-import { ICutomers, IRowData, ITransactions } from "../interface";
+import { ICutomers, ITransactions } from "../interface";
 import axios from "axios";
 import useQuery from "../utils/CustomeHook";
 type IDataProvider = {

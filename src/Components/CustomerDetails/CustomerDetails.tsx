@@ -14,8 +14,6 @@ function TransactionDetails() {
 
     console.log(customer)
     // calc average
-    const amounts = customerTransactions.map((transaction: ITransactions) => transaction.amount);
-    const total = amounts.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
 
     return (
 
